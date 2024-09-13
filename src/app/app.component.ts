@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { UserListComponent } from './user-list/user-list.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, UserListComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'linting-formatting-practice';

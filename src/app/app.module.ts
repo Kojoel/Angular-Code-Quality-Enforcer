@@ -6,13 +6,11 @@ import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    UserListComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }

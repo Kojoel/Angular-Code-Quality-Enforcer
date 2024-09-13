@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'linting-formatting-practice';
 
   constructor() {
@@ -20,7 +20,7 @@ export class AppComponent {
   }
 
   public doSomething():void {
-    const y = 20
-    console.log(y)
+    const y = 20;
+    console.log(y);
   }
 }

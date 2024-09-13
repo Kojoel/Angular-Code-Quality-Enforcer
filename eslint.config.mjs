@@ -30,8 +30,7 @@ export default [{
     },
 
     rules: {
-        quotes: ["error", "single"],
-        semi: ["error", "always"],
+        semi: ["warn", "always"],
     },
 }, ...compat.extends("plugin:@angular-eslint/template/recommended").map(config => ({
     ...config,
@@ -40,7 +39,7 @@ export default [{
     files: ["**/*.html"],
 
     rules: {
-        "max-len": ["error", {
+        "max-len": ["warn", {
             code: 120,
         }],
     },

@@ -1,27 +1,67 @@
-# LintingFormattingPractice
+### Linting Formatting Practice
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+### Project Description
 
-## Development server
+- About
+  This project focuses on improving code quality in an Angular application by integrating ESLint and Prettier. It involves configuring ESLint, adding custom rules, fixing linting errors, and documenting fixes. It also involves integrating Prettier for consistent code formatting and automating both tools using npm scripts and pre-commit hooks.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Setup Instructions
 
-## Code scaffolding
+## 1. Fork the Repository
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Find Repo at: https://github.com/AmaliTech-Training-Academy/linting-formatting-practice
 
-## Build
+## 2. Clone the Repository
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Open your terminal or command prompt and run the following command to clone the repository to your local machine:
 
-## Running unit tests
+- Replace the {user-name} with your github username excluding the curly braces {}
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+https://github.com/{user-name}/Angular-Code-Quality-Enforcer.git
+```
 
-## Running end-to-end tests
+## 3. Navigate to Project
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+cd repository-name
+```
 
-## Further help
+## 4. Install Dependencies
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run the following command to install the project dependencies:
+
+```
+npm install
+```
+
+<!-- ## 5. Install ESLint and Related Packages
+Run the following commands to install ESLint and its necessary plugins:
+```
+npm install --save-dev eslint@9.10.0 @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-import
+``` -->
+
+## 5. Run ESLint
+
+To check your code for linting issues, run:
+
+```
+npm run lint
+```
+
+### Errors
+
+After running the 'npm run lint' command, the following errors were detected:
+
+```
+D:\Amalitech Frontend Labs\ANGULAR\Angular-Code-Quality-Enforcer\src\app\app.component.ts
+  15:3   warning  Lifecycle interface 'OnInit' should be implemented for method 'ngOnInit'. (https://angular.dev/style-guide#style-09-01)  @angular-eslint/use-lifecycle-interface
+  23:17  warning  Missing semicolon                                                                                                        semi
+  24:19  warning  Missing semicolon
+
+  ✖ 3 problems (0 errors, 3 warnings)                                                                                                      semi
+```
+
+- The first warning was fixed by adding 'implements OnInit' to the App Component Class and importing OnInit in the component.
+- The last two warnings were fixed by placing a semi-colon at the ends of the statements made on line 23, and line 24;
+  Running 'npm run lint' after fixing the errors did not generate any further errors.

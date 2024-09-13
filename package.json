@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:linting-formatting-practice": "node dist/linting-formatting-practice/server/server.mjs"
+    "serve:ssr:linting-formatting-practice": "node dist/linting-formatting-practice/server/server.mjs",
+    "lint": "eslint . --ext .ts,.html"
   },
   "private": true,
   "dependencies": {

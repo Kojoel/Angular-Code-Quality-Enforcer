@@ -1,26 +1,30 @@
 {
-    "root": true,
-    "ignorePatterns": ["projects/**/*"],
-    "overrides": [
-      {
-        "files": ["*.ts"],
-        "parserOptions": {
-          "project": ["tsconfig.json"],
-          "createDefaultProgram": true
-        },
-        "extends": ["plugin:@angular-eslint/recommended"],
-        "rules": {
-          "quotes": ["error", "single"],        
-          "semi": ["error", "always"]           
-        }
+  "root": true,
+  "ignorePatterns": ["projects/**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json"],
+        "createDefaultProgram": true
       },
-      {
-        "files": ["*.html"],
-        "extends": ["plugin:@angular-eslint/template/recommended"],
-        "rules": {
-          "max-len": ["error", { "code": 120 }] 
-        }
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:prettier/recommended",
+        "prettier"
+      ],
+      "rules": {
+        "prettier/prettier": ["error", { "endOfLine": "auto" }],
+        // "quotes": ["warn", "single"],
+        "semi": ["error", "always"]
       }
-    ]
-  }
-  
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "rules": {
+        "max-len": ["error", { "code": 120 }]
+      }
+    }
+  ]
+}
